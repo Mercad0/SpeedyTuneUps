@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+html {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth !important;
+  }
+  
+  .the-underline {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .the-underline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    opacity: 80%;
+    transform-origin: bottom right;
+    transition: transform 0.45s ease-in-out;
+    border-radius: 50px;
+  }
+  
+  .the-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
