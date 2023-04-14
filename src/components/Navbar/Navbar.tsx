@@ -4,6 +4,7 @@ import { LinkProps } from "../Types";
 import { RiMenuFoldLine } from "react-icons/ri";
 import React from "react";
 import MobileNav from "./MobileNav";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -11,7 +12,7 @@ export const Navbar = () => {
 
   const links = [
     { title: "Home", href: "/" },
-    { title: "About", href: "/about" },
+    { title: "About Us", href: "/about" },
     { title: "Services", href: "/services" },
     { title: "Gallery", href: "/gallery" },
   ];
@@ -48,16 +49,20 @@ export const Navbar = () => {
 };
 
 const LinkName = ({ links }: LinkProps) => {
+  const router = useRouter();
   return (
     <ul className="hidden space-x-8 text-xl md:flex rounded-md px-8 transition-all">
-      {links.map(({ href, title }) => (
-        <li
-          key={href}
-          className="transform hover:scale-105 duration-500 the-underline hover:text-red-600"
-        >
-          <Link href={href}>{title}</Link>
-        </li>
-      ))}
+      {links.map(({ href, title }) => {
+        const isActive = router.pathname === href;
+        const linkName = isActive
+          ? "transform hover:scale-105 duration-500 the-underline text-red-600"
+          : "transform hover:scale-105 duration-500 the-underline hover:text-red-600";
+        return (
+          <li key={href} className={linkName}>
+            <Link href={href}>{title}</Link>
+          </li>
+        );
+      })}
     </ul>
   );
 };

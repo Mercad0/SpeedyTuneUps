@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const links = [
     { title: "Home", href: "/" },
-    { title: "About", href: "/about" },
+    { title: "About Us", href: "/about" },
     { title: "Services", href: "/services" },
     { title: "Gallery", href: "/gallery" },
   ];
@@ -21,7 +21,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
         transform: isOpen ? "translateX(0)" : "translateX(100%)",
       }}
     >
-      <div className="h-full container mx-auto px-4 md:px-8 flex flex-col">
+      <div className="h-full container mx-auto px-2 md:px-8 flex flex-col">
         <button
           onClick={onClose}
           aria-label="Close drop-down Menu"
