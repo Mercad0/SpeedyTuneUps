@@ -40,7 +40,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`h-fit w-full fixed duration-500 font-medium z-50 transition-all ${
-        scrollingUp ? "bg-white shadow-xl" : "bg-transparent shadow-none"
+        scrollingUp ? "bg-white shadow-xl" : "bg-lime-400 bg-opacity-50 shadow-none"
       }`}
     >
       <div className="flex items-center md:justify-between justify-center">
