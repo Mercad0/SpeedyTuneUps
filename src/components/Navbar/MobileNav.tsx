@@ -13,8 +13,8 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
   return (
     <div
-      className={`md:hidden absolute mt-40 top-0 right-0 ease-in-out w-full h-fit bg-gradient-to-br from-lime-300 to-lime-500 z-50 transition-all ${
-        isOpen ? "pointer-events-auto" : "pointer-events-none"
+      className={`md:hidden absolute mt-40 top-0 right-0 ease-in-out w-full h-fit bg-lime-400 z-50 transition-all ${
+        isOpen ? "pointer-events-auto bg-lime-400" : "pointer-events-none"
       }`}
       style={{
         transitionDuration: "0.9s",

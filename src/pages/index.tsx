@@ -1,4 +1,4 @@
-import { Header } from "@/components/Navbar/Header";
+import { Header } from "@/components/navbar/Header";
 import Head from "next/head";
 
 export default function Home() {
