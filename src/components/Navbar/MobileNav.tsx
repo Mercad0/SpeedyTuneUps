@@ -13,7 +13,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
   return (
     <div
-      className={`md:hidden fixed top-0 right-0 ease-in-out w-full h-fit mt-48 rounded-bl-3xl bg-gradient-to-br from-lime-300 to-lime-500 z-50 transition-all ${
+      className={`md:hidden absolute mt-40 top-0 right-0 ease-in-out w-full h-fit bg-gradient-to-br from-lime-300 to-lime-500 z-50 transition-all ${
         isOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
       style={{
@@ -25,7 +25,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
         <button
           onClick={onClose}
           aria-label="Close drop-down Menu"
-          className="absolute -top-16 right-4 text-red-500 focus:outline-none transition-all duration-500"
+          className="absolute sm:-top-4 -top-14 right-6 bg-white rounded-lg text-red-500 focus:outline-none transition-all duration-500"
         >
           <RiMenuUnfoldLine className="w-10 h-10" />
         </button>
@@ -38,13 +38,13 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 const LinkName = ({ links, onClose }: MobileNavProps) => {
   return (
     <ul className="space-x-4 text-black text-center font-mono text-xl">
-      {links.map((link) => (
+      {links.map(({href, title}) => (
         <li
-          key={link.href}
+          key={href}
           className="cursor-pointer inline-block"
           onClick={onClose}
         >
-          <Link href={link.href}>{link.title}</Link>
+          <Link href={href}>{title}</Link>
         </li>
       ))}
     </ul>

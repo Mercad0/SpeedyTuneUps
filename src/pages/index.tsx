@@ -1,8 +1,9 @@
+import { Header } from "@/components/Navbar/Header";
 import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="w-full flex justify-center pb-20">
+    <>
       <Head>
         <title>Speedy Tune Ups - Mobile Fleet Services </title>
         <meta
@@ -15,6 +16,7 @@ export default function Home() {
         />
         <link rel="icon" href="/Svgs/SpeedyIcon.svg" />
       </Head>
-    </div>
+      <Header title="Home" />
+    </>
   );
 }

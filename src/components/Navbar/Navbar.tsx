@@ -5,10 +5,30 @@ import { RiMenuFoldLine } from "react-icons/ri";
 import React from "react";
 import MobileNav from "./MobileNav";
 import { useRouter } from "next/router";
+import { SpeedyLogo } from "@/Svg/SpeedyLogo";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  const [scrollingUp, setScrollingUp] = React.useState(true);
+  const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
+
+  const handleScroll = React.useCallback(() => {
+    const currentScrollPosition = window.pageYOffset;
+    setScrollingUp(currentScrollPosition < lastScrollPosition);
+    setLastScrollPosition(currentScrollPosition);
+  }, [lastScrollPosition]);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [handleScroll]);
 
   const links = [
     { title: "Home", href: "/" },
@@ -18,26 +38,27 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="h-fit w-full fixed duration-500 bg-white shadow-xl font-medium z-50">
-      <div className="container flex items-center justify-between">
-        <Link href="/" aria-label="Home">
-          <Image
-            src="/Svgs/SpeedyTuneUpsLogo.svg"
-            alt="Logo"
-            width={200}
-            height={100}
-            priority={true}
-            className="ml-10 w-auto"
-          />
-        </Link>
-        <LinkName links={links} />
+    <nav
+      className={`h-fit w-full fixed duration-500 font-medium z-50 transition-all ${
+        scrollingUp ? "bg-white shadow-xl" : "bg-transparent shadow-none"
+      }`}
+    >
+      <div className="flex items-center md:justify-between justify-center">
+        <div className="w-96 transition-all duration-500 hover:scale-105">
+          <Link href="/" aria-label="Home">
+            <SpeedyLogo />
+          </Link>
+        </div>
+        <div>
+          <LinkName links={links} />
+        </div>
         <button
           className="block md:hidden px-4 transition-all text-lg"
           onClick={toggle}
           aria-label="Mobile menu"
         >
           {isOpen ? (
-            <RiMenuFoldLine className="w-10 h-10 text-lime-50 duration-300 translate-x-52 z-50 mt-28" />
+            <RiMenuFoldLine className="w-10 h-10 text-lime-50 duration-700 translate-x-52 z-50 mt-28" />
           ) : (
             <RiMenuFoldLine className="w-10 h-10 duration-700 hover:text-red-600 mt-28" />
           )}
