@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header } from "../components/navbar/Header";
+import { Header } from "../components/Navbar/Header";
 import { AboutUs } from "@/components/aboutUs/AboutUs";
 
 export default function About() {
