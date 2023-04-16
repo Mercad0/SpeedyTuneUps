@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import frontShopView from "/public/images/frontShopView.png";
+import WhoWeAre from "public/images/whoWeAre.png";
+import owners from "public/images/owners.png";
+
 export const AboutUs = () => {
   return (
     <main className="container mx-auto px-4 md:px-8 py-12">
@@ -11,25 +15,23 @@ export const AboutUs = () => {
             Speedy Tune-Up&apos;s Fleet Services is family owned and operated,
             proudly servicing Miami-Dade, Broward and Palm Beach since 2007.
           </p>
-          <div className="md:w-96 mx-auto">
+          <div className="md:w-96 mx-auto relative">
             <Image
-              width={250}
-              height={100}
               priority={true}
-              src="/images/frontShopView.jpeg"
+              placeholder="blur"
+              src={frontShopView}
               alt="Front View of Shop"
-              className="w-fit mx-auto rounded-md shadow-md mt-6"
+              className="w-96 mx-auto rounded-md shadow-md mt-6"
             />
           </div>
         </div>
-        <div className="md:w-80">
+        <div className="w-full md:w-80 relative">
           <Image
-            width={250}
-            height={100}
             priority={true}
-            src="/images/whoWeAre.png"
+            placeholder="blur"
+            src={WhoWeAre}
             alt="Who we are"
-            className="w-full h-auto rounded-md shadow-md"
+            className="mx-auto h-auto rounded-md shadow-md w-96"
           />
         </div>
       </section>
@@ -80,13 +82,12 @@ export const AboutUs = () => {
             More services here
           </Link>
         </div>
-        <div className="w-fit md:w-2/6 mx-auto">
+        <div className="w-fit md:w-3/6 mx-auto relative">
           <Image
-            width={250}
-            height={100}
-            src="/images/owners.png"
+            placeholder="blur"
+            src={owners}
             alt="Owners"
-            className="w-full h-auto rounded-md shadow-md max-w-96"
+            className="rounded-md shadow-md w-96"
           />
         </div>
       </section>
