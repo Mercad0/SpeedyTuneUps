@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { Header } from "../components/Navbar/Header";
-import { AboutUs } from "@/components/aboutUs/AboutUs";
+import { AboutUs } from "@/components/AboutUs/AboutUs";
 
 export default function About() {
   return (
-    <>
+    <div>
       <Head>
         <title>Speedy Tune-Ups About</title>
         <link rel="icon" href="/Svgs/SpeedyIcon.svg" />
@@ -19,6 +19,6 @@ export default function About() {
       </Head>
       <Header title="About Us" />
       <AboutUs />
-    </>
+    </div>
   );
 }
