@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import frontShopView from "/public/images/frontShopView.png";
-import WhoWeAre from "public/images/whoWeAre.png";
-import owners from "public/images/owners.png";
+import frontShopView from "../public/assets/frontShopView.png";
+import WhoWeAre from "../public/assets/whoWeAre.png";
+import owners from "../public/assets/owners.png";
 
-export const AboutUs = () => {
+export default function AboutUs() {
   return (
     <main className="container mx-auto px-4 md:px-8 py-12">
       <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-16">

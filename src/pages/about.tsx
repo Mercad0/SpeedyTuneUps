@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Header } from "../components/Navbar/Header";
-import { AboutUs } from "@/components/AboutUs/AboutUs";
+import AboutUs from "@/components/AboutUs";
 
 export default function About() {
   return (
