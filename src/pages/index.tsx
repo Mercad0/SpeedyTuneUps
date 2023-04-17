@@ -14,7 +14,7 @@ export default function Home() {
           name="keywords"
           content="speedy tune-ups, automotive services, car maintenance, car repair, tune-ups, oil changes, brake services, vehicle maintenance, auto care"
         />
-        <link rel="icon" href="/Svgs/SpeedyIcon.svg" />
+        <link rel="icon" href="/SpeedyIcon.svg" />
       </Head>
       <Header title="Home" />
     </>

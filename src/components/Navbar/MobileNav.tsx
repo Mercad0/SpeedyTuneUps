@@ -13,8 +13,8 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
   return (
     <div
-      className={`md:hidden absolute mt-40 top-0 right-0 ease-in-out w-full h-fit bg-lime-400 z-50 transition-all ${
-        isOpen ? "pointer-events-auto bg-lime-400" : "pointer-events-none"
+      className={`md:hidden absolute mt-40 top-0 right-0 ease-in-out w-full h-fit z-50 bg-lime-400 transition-all ${
+        isOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
       style={{
         transitionDuration: "0.9s",
@@ -37,7 +37,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
 const LinkName = ({ links, onClose }: MobileNavProps) => {
   return (
-    <ul className="space-x-4 text-black text-center font-mono text-xl">
+    <ul className="space-x-4 text-black text-center font-mono text-xl bg-lime-400 rounded-lg">
       {links.map(({href, title}) => (
         <li
           key={href}

@@ -7,7 +7,7 @@ export default function services() {
     <>
       <Head>
         <title>Speedy Tune-Ups Services</title>
-        <link rel="icon" href="/Svgs/SpeedyIcon.svg" />
+        <link rel="icon" href="/SpeedyIcon.svg" />
       </Head>
       <Header title="Services" />
     </>
