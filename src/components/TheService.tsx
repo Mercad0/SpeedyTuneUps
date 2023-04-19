@@ -62,7 +62,7 @@ const ServiceCard = ({ service }: ServiceProps) => {
             {mainTitle}
           </h2>
           <h3 className="md:text-2xl font-bold text-xl mb-2">{serviceTitle}</h3>
-          <h4 className="md:text-xl text-lg font-normal m-0">{description}</h4>
+          <h4 className="md:text-xl text-lg">{description}</h4>
         </div>
       ))}
     </div>
