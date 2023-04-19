@@ -69,17 +69,18 @@ export default function AboutUs() {
           <h2 className="text-3xl font-semibold mb-4">Services we offer</h2>
           <ul className="list-disc pl-6 text-lg">
             <li>24-hour on-location mobile fleet service **</li>
-            <li>Complete Auto Care Center</li>
-            <li>Muffler Repair</li>
+            <li>Oil Change With Free porter Service ** </li>
+            <li>Tire Service</li>
             <li>Brakes Service</li>
-            <li>Oil Service</li>
+            <li>Muffler Repair</li>
+            <li>Diesel Extraction and more..</li>
           </ul>
           <Link
             href="/services"
             aria-label="click here button for more services"
-            className="w-fit p-4 m-4 rounded-lg duration-300 font-medium bg-lime-500 text-black hover:bg-lime-600 hover:text-white"
+            className="w-fit p-4 m-4 rounded-lg duration-300 font-semibold bg-lime-500 text-black hover:bg-lime-600 hover:text-white"
           >
-            More services here
+            Click here to see other services
           </Link>
         </div>
         <div className="w-fit md:w-3/6 mx-auto relative">

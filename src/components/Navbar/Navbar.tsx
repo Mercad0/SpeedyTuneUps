@@ -14,7 +14,7 @@ export const Navbar = () => {
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
 
   const handleScroll = React.useCallback(() => {
-    const currentScrollPosition = window.pageYOffset;
+    const currentScrollPosition = window.scrollY;
     setScrollingUp(currentScrollPosition < lastScrollPosition);
     setLastScrollPosition(currentScrollPosition);
   }, [lastScrollPosition]);

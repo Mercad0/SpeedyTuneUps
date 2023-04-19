@@ -11,3 +11,11 @@ export interface LinkProps {
     links: { title: string; href: string }[];
   }
   
+// Service.tsx Props
+  export interface ServiceProps {
+    service: {
+      serviceTitle: string;
+      description: string;
+      mainTitle?: String;
+    }[];
+  }
