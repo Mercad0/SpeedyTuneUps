@@ -1,7 +1,7 @@
 import React from "react";
 import { ServiceProps } from "./Types";
 
-export const Service = () => {
+export default function Service () {
   const service = [
     {
       mainTitle: "OnSite Services",
