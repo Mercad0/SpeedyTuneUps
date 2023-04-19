@@ -4,10 +4,11 @@ import Link from "next/link";
 import frontShopView from "../public/assets/frontShopView.png";
 import WhoWeAre from "../public/assets/whoWeAre.png";
 import owners from "../public/assets/owners.png";
+import locations from "../public/assets/locations.png";
 
 export default function AboutUs() {
   return (
-    <main className="container mx-auto px-4 md:px-8 py-12">
+    <main className="container mx-auto px-4 py-12">
       <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-16">
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
@@ -15,7 +16,7 @@ export default function AboutUs() {
             Speedy Tune-Up&apos;s Fleet Services is family owned and operated,
             proudly servicing Miami-Dade, Broward and Palm Beach since 2007.
           </p>
-          <div className="md:w-96 mx-auto relative">
+          <div className="md:w-96 mx-auto">
             <Image
               priority={true}
               placeholder="blur"
@@ -25,7 +26,7 @@ export default function AboutUs() {
             />
           </div>
         </div>
-        <div className="w-full md:w-80 relative">
+        <div className="w-full md:w-80">
           <Image
             priority={true}
             placeholder="blur"
@@ -83,15 +84,25 @@ export default function AboutUs() {
             Click here to see other services
           </Link>
         </div>
-        <div className="w-fit md:w-3/6 mx-auto relative">
-          <Image
-            placeholder="blur"
-            src={owners}
-            alt="Owners"
-            className="rounded-md shadow-md w-96"
-          />
+        <div className="flex md:w-1/2 w-fit mx-auto md:flex-row flex-col md:gap-10 gap-4">
+          <div className="w-fit flex">
+            <Image
+              placeholder="blur"
+              src={owners}
+              alt="Owners"
+              className="rounded-md shadow-md w-80"
+            />
+          </div>
+          <div className="w-fit flex">
+            <Image
+              placeholder="blur"
+              src={locations}
+              alt="locations"
+              className="rounded-md shadow-md w-80"
+            />
+          </div>
         </div>
       </section>
     </main>
   );
-};
+}

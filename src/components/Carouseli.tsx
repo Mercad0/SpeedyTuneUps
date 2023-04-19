@@ -20,7 +20,7 @@ const Carouseli = ({ images }: ImageCarouselProps) => {
         showStatus={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={5000}
+        interval={4000}
         swipeable={true}
         dynamicHeight={false}
         showArrows={false}
