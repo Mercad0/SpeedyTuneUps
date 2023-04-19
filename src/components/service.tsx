@@ -1,12 +1,6 @@
 import React from "react";
 import { ServiceProps } from "./Types";
 
-import Image from "next/image";
-
-import oilService from "../public/assets/oilService.png";
-import tireService from "../public/assets/tireService.png";
-import onsiteServices from "../public/assets/onsiteServices.png";
-
 export const Service = () => {
   const service = [
     {
@@ -53,44 +47,22 @@ export const Service = () => {
     },
   ];
   return (
-    <div className="h-fit flex flex-col w-full">
-      <div className="flex w-full justify-between mt-10">
-        <Image
-          placeholder="blur"
-          src={onsiteServices}
-          alt="Owners"
-          className="rounded-md shadow-md w-96 h-96"
-        />
-        <Image
-          placeholder="blur"
-          src={oilService}
-          alt="Owners"
-          className="rounded-md shadow-md w-96 hidden md:block"
-        />
-        <Image
-          placeholder="blur"
-          src={tireService}
-          alt="Owners"
-          className="rounded-md shadow-md w-96 hidden md:block"
-        />
-      </div>
-      <div className="md:w-2/3 w-fit">
-        <ServiceCard service={service} />
-      </div>
+    <div className="h-fit w-full">
+      <ServiceCard service={service} />
     </div>
   );
 };
 
 const ServiceCard = ({ service }: ServiceProps) => {
   return (
-    <div className="">
+    <div className="md:w-2/3 w-fit flex flex-col">
       {service.map(({ mainTitle, serviceTitle, description }) => (
-        <div key={serviceTitle} className="w-full flex flex-col">
+        <div key={serviceTitle} className="w-full">
           <h2 className="md:text-4xl text-2xl mb-8 mt-12 font-semibold text-red-500">
             {mainTitle}
           </h2>
           <h3 className="md:text-2xl font-bold text-xl mb-2">{serviceTitle}</h3>
-          <h4 className="md:text-xl text-lg font-normal">{description}</h4>
+          <h4 className="md:text-xl text-lg font-normal m-0">{description}</h4>
         </div>
       ))}
     </div>
