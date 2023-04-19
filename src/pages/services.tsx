@@ -1,5 +1,4 @@
 import { Header } from "@/components/Navbar/Header";
-import Service from "@/components/Service";
 
 import Head from "next/head";
 import Carouseli from "@/components/Carouseli";
@@ -9,6 +8,7 @@ import oilService from "../public/serviceAssets/oilService.png";
 import tireService from "../public/serviceAssets/tireService.png";
 import onsiteServices from "../public/serviceAssets/onsiteServices.png";
 import inspections from "../public/serviceAssets/inspections.png";
+import TheService from "@/components/TheService";
 
 const images = [
   { src: onsiteServices, alt: "Onsite Services" },
@@ -35,7 +35,7 @@ export default function services() {
       <Header title="Services" />
       <Carouseli images={images} />
       <div className="mb-10 mx-2">
-        <Service />
+        <TheService />
       </div>
     </>
   );
