@@ -1,7 +1,7 @@
 import React from "react";
 import { ServiceProps } from "./Types";
 
-export default function TheService () {
+export default function TheService() {
   const service = [
     {
       mainTitle: "OnSite Services",
@@ -47,11 +47,11 @@ export default function TheService () {
     },
   ];
   return (
-    <div className="h-fit w-full">
+    <div className="h-fit container mx-auto">
       <ServiceCard service={service} />
     </div>
   );
-};
+}
 
 const ServiceCard = ({ service }: ServiceProps) => {
   return (

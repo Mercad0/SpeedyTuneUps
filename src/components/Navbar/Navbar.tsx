@@ -38,7 +38,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`h-fit w-full fixed duration-500 font-medium z-50 transition-all ${
+      className={`h-fit max-w-screen-2xl w-full fixed duration-500 font-medium z-50 transition-all ${
         scrollingUp ? "bg-white bg-opacity-95" : "bg-white bg-opacity-50"
       }`}
     >

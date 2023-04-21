@@ -8,7 +8,7 @@ import locations from "../public/assets/locations.png";
 
 export default function AboutUs() {
   return (
-    <main className="container mx-auto px-4 py-12">
+    <main className="container mx-auto px-4 py-12 w-full">
       <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-16">
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
@@ -90,7 +90,7 @@ export default function AboutUs() {
               placeholder="blur"
               src={owners}
               alt="Owners"
-              className="rounded-md shadow-md w-80"
+              className="rounded-md shadow-md w-96"
             />
           </div>
           <div className="w-fit flex">
@@ -98,7 +98,7 @@ export default function AboutUs() {
               placeholder="blur"
               src={locations}
               alt="locations"
-              className="rounded-md shadow-md w-80"
+              className="rounded-md shadow-md w-96"
             />
           </div>
         </div>

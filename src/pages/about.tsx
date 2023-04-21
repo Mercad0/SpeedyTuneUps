@@ -8,7 +8,7 @@ export default function About() {
       <Head>
         <title>Speedy Tune-Ups About</title>
         <link rel="icon" href="/SpeedyIcon.svg" />
-         <meta
+        <meta
           name="description"
           content="Speedy Tune-ups is your go-to source for fast, reliable, and professional automotive services. We specialize in tune-ups, oil changes, brake services, and more, ensuring your vehicle stays in peak condition. Visit us today for a superior car care experience!"
         />

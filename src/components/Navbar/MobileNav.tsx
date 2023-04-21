@@ -38,7 +38,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 const LinkName = ({ links, onClose }: MobileNavProps) => {
   return (
     <ul className="space-x-4 text-black text-center font-mono text-xl bg-lime-400 rounded-lg">
-      {links.map(({href, title}) => (
+      {links.map(({ href, title }) => (
         <li
           key={href}
           className="cursor-pointer inline-block"

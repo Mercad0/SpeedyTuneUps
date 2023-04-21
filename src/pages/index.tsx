@@ -1,3 +1,4 @@
+import MainScreen from "@/components/MainScreen";
 import { Header } from "@/components/Navbar/Header";
 import Head from "next/head";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <link rel="icon" href="/SpeedyIcon.svg" />
       </Head>
       <Header title="Home" />
+      <MainScreen />
     </>
   );
 }
