@@ -50,7 +50,7 @@ export default function Footer() {
           ]}
         />
       </div>
-      <p className="text-md text-black font-bold text-center bg-gray-300 py-6">
+      <p className="md:text-base text-sm font-bold text-center bg-gray-300 py-6">
         Copyright &copy; {currentYear} Speedy Tune Up&apos;s Fleet Services
       </p>
     </footer>
