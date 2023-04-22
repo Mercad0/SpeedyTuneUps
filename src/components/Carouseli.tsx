@@ -28,7 +28,10 @@ const Carouseli = ({ images }: ImageCarouselProps) => {
         centerSlidePercentage={33}
       >
         {images.map((image) => (
-          <div key={image.alt} className="flex justify-center items-center">
+          <div
+            key={image.alt}
+            className="flex justify-center items-center overflow-auto"
+          >
             <Image
               placeholder="blur"
               src={image.src}

@@ -1,6 +1,22 @@
+import Carouseli from "@/components/Carouseli";
 import MainScreen from "@/components/MainScreen";
 import { Header } from "@/components/Navbar/Header";
 import Head from "next/head";
+import Link from "next/link";
+
+import commitServices from "../public/mainAssets/commitServices.png";
+import inspectionServices from "../public/mainAssets/inspectionServices.png";
+import mainServices from "../public/mainAssets/mainServices.png";
+import moreLocations from "../public/mainAssets/moreLocations.png";
+import careServices from "../public/mainAssets/careServices.png";
+
+const images = [
+  { src: commitServices, alt: "We're Commited Photo" },
+  { src: inspectionServices, alt: "Inspection Services" },
+  { src: mainServices, alt: "General Services" },
+  { src: moreLocations, alt: "Locations" },
+  { src: careServices, alt: "Care Services" },
+];
 
 export default function Home() {
   return (
@@ -18,6 +34,9 @@ export default function Home() {
         <link rel="icon" href="/SpeedyIcon.svg" />
       </Head>
       <Header title="Home" />
+      <Link href="/services">
+        <Carouseli images={images} />
+      </Link>
       <MainScreen />
     </>
   );
