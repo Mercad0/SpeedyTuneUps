@@ -3,6 +3,7 @@ import React from "react";
 import { FaRunning } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
 import { AiFillCar, AiOutlineAlignRight } from "react-icons/ai";
+import GoogleMapComponent from "./GoogleMap";
 
 export default function MainScreen() {
   return (
@@ -58,6 +59,9 @@ export default function MainScreen() {
         </div>
       </section>
 
+      <section className=" justify-center my-4 flex">
+        <GoogleMapComponent />
+      </section>
       <section className="bg-lime-300 text-black text-center py-12 rounded-md flex flex-col">
         <h2 className="text-3xl font-bold mb-2">Need something done?</h2>
         <p className="mb-4 text-lg">
