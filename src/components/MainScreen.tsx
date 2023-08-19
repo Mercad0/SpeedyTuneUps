@@ -22,7 +22,7 @@ export default function MainScreen() {
         </p>
         <Link
           href="/about"
-          aria-label="click here button for more services"
+          aria-label="Learn about Our history"
           className="w-fit p-4 m-4 rounded-lg duration-300 font-semibold bg-lime-500 text-black hover:bg-lime-600 hover:text-white"
         >
           Learn about Our history
@@ -69,7 +69,7 @@ export default function MainScreen() {
         </p>
         <Link
           href="/services"
-          aria-label="click here button for more services"
+          aria-label="Click here to see other services"
           className="w-fit p-4 m-4 rounded-lg duration-300 mx-auto font-semibold bg-lime-500 text-black hover:bg-lime-600 hover:text-white"
         >
           Click here to see other services

@@ -30,7 +30,10 @@ const GoogleMapComponent: React.FC = () => {
     <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
         <Marker position={markerSpeedyPosition} />
-        <InfoWindow position={markerSpeedyPosition}>
+        <InfoWindow
+          position={markerSpeedyPosition}
+          aria-label="Speedy Tune-Ups Address"
+        >
           <div className="bg-white p-2 rounded shadow-lg">
             <h2 className="text-xl font-semibold">Speedy Tune Ups</h2>
             <p className="text-gray-600">
