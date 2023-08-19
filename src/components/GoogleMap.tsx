@@ -1,5 +1,10 @@
 import React from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 
 const containerStyle = {
   width: "98%",
@@ -25,6 +30,14 @@ const GoogleMapComponent: React.FC = () => {
     <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
         <Marker position={markerSpeedyPosition} />
+        <InfoWindow position={markerSpeedyPosition}>
+          <div className="bg-white p-2 rounded shadow-lg">
+            <h2 className="text-xl font-semibold">Speedy Tune Ups</h2>
+            <p className="text-gray-600">
+              130 NW 22nd Avenue in Miami, FL 33125
+            </p>
+          </div>
+        </InfoWindow>
       </GoogleMap>
     </LoadScript>
   );
